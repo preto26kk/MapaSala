@@ -40,10 +40,10 @@ namespace MapaSala.Formularios
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtGridSalas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -139,20 +139,20 @@ namespace MapaSala.Formularios
             this.numericUpDown2.Size = new System.Drawing.Size(112, 20);
             this.numericUpDown2.TabIndex = 12;
             // 
-            // dataGridView1
+            // dtGridSalas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 77);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(673, 352);
-            this.dataGridView1.TabIndex = 13;
+            this.dtGridSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridSalas.Location = new System.Drawing.Point(12, 77);
+            this.dtGridSalas.Name = "dtGridSalas";
+            this.dtGridSalas.Size = new System.Drawing.Size(673, 352);
+            this.dtGridSalas.TabIndex = 13;
             // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtGridSalas);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button1);
@@ -165,10 +165,11 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "frmSalas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSalas";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,6 +188,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtGridSalas;
     }
 }

@@ -44,5 +44,10 @@ namespace MapaSala.Formularios
         {
 
         }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

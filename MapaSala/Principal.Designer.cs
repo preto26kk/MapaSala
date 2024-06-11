@@ -49,6 +49,7 @@ namespace MapaSala
             this.salasLivresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosProfessoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +75,8 @@ namespace MapaSala
             this.disciplinasToolStripMenuItem,
             this.horáriosToolStripMenuItem,
             this.cursosToolStripMenuItem,
-            this.diasDaSemanaToolStripMenuItem});
+            this.diasDaSemanaToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
             this.toolStripMenuItem1.Text = "Cadastros";
@@ -206,6 +208,13 @@ namespace MapaSala
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,5 +258,6 @@ namespace MapaSala
         private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diasDaSemanaToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
     }
 }

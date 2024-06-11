@@ -31,5 +31,18 @@ namespace MapaSala.Formularios
 
             dados.Add(salas);
         }
+
+        private void dtGridCurso_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtnome.Text = "";
+            txtId.Text = "";
+            txtTurno.Text = "";
+            ativo.Checked = false;
+        }
     }
 }

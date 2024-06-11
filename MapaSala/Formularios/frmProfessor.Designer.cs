@@ -37,6 +37,8 @@ namespace MapaSala.Formularios
             this.txtApelido = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtGridProf = new System.Windows.Forms.DataGridView();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.Excluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProf)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,12 +108,35 @@ namespace MapaSala.Formularios
             this.dtGridProf.Name = "dtGridProf";
             this.dtGridProf.Size = new System.Drawing.Size(673, 352);
             this.dtGridProf.TabIndex = 14;
+            this.dtGridProf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridProf_CellContentClick);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(498, 25);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 15;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // Excluir
+            // 
+            this.Excluir.Location = new System.Drawing.Point(589, 26);
+            this.Excluir.Name = "Excluir";
+            this.Excluir.Size = new System.Drawing.Size(75, 23);
+            this.Excluir.TabIndex = 16;
+            this.Excluir.Text = "Excluir";
+            this.Excluir.UseVisualStyleBackColor = true;
+            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
             // frmProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Excluir);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.dtGridProf);
             this.Controls.Add(this.txtApelido);
             this.Controls.Add(this.label3);
@@ -123,6 +148,7 @@ namespace MapaSala.Formularios
             this.Name = "frmProfessor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProfessor";
+            this.Load += new System.EventHandler(this.frmProfessor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProf)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,5 +165,7 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.TextBox txtApelido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dtGridProf;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button Excluir;
     }
 }

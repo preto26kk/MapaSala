@@ -13,11 +13,12 @@ namespace MapaSala.Formularios
 {
     public partial class frmProfessor : Form
     {
-        BindingSource dados;
+        DataTable dados;
+        int LinhaSelecionada;
         public frmProfessor()
         {
             InitializeComponent();
-            dados = new BindingSource();
+            dados = new DataTable();
             dtGridProf.DataSource = dados;
         }
 
@@ -33,6 +34,28 @@ namespace MapaSala.Formularios
             salas.Nome = txtnome.Text;
             salas.Apelido = txtApelido.Text;
             dados.Add(salas);
+        }
+
+        private void dtGridProf_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtnome.Text = "";
+            txtId.Text = "";
+            txtApelido.Text = "";
+        }
+
+        private void frmProfessor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Excluir_Click(object sender, EventArgs e)
+        {
+            dtGridProf.Rows.RemoveAt(LinhaSelecionada);
         }
     }
 }

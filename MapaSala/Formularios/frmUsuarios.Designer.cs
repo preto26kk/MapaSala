@@ -31,13 +31,15 @@ namespace MapaSala.Formularios
         {
             this.dtGridUsuario = new System.Windows.Forms.DataGridView();
             this.ativo = new System.Windows.Forms.CheckBox();
-            this.txtTurno = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtnome = new System.Windows.Forms.TextBox();
+            this.txtLogin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_salvar = new System.Windows.Forms.Button();
+            this.txtnome = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,48 +50,50 @@ namespace MapaSala.Formularios
             this.dtGridUsuario.Name = "dtGridUsuario";
             this.dtGridUsuario.Size = new System.Drawing.Size(673, 352);
             this.dtGridUsuario.TabIndex = 33;
+            this.dtGridUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridUsuario_CellContentClick);
             // 
             // ativo
             // 
             this.ativo.AutoSize = true;
-            this.ativo.Location = new System.Drawing.Point(454, 42);
+            this.ativo.Location = new System.Drawing.Point(586, 37);
             this.ativo.Name = "ativo";
             this.ativo.Size = new System.Drawing.Size(49, 17);
             this.ativo.TabIndex = 32;
             this.ativo.Text = "ativo";
             this.ativo.UseVisualStyleBackColor = true;
             // 
-            // txtTurno
+            // txtSenha
             // 
-            this.txtTurno.Location = new System.Drawing.Point(328, 40);
-            this.txtTurno.Name = "txtTurno";
-            this.txtTurno.Size = new System.Drawing.Size(100, 20);
-            this.txtTurno.TabIndex = 31;
+            this.txtSenha.Location = new System.Drawing.Point(328, 40);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(100, 20);
+            this.txtSenha.TabIndex = 31;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(325, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 30;
-            this.label3.Text = "Turno";
+            this.label3.Text = "Senha";
             // 
-            // txtnome
+            // txtLogin
             // 
-            this.txtnome.Location = new System.Drawing.Point(195, 40);
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(100, 20);
-            this.txtnome.TabIndex = 29;
+            this.txtLogin.Location = new System.Drawing.Point(195, 40);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(100, 20);
+            this.txtLogin.TabIndex = 29;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(192, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 28;
-            this.label2.Text = "Nome";
+            this.label2.Text = "Login";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtId
             // 
@@ -109,23 +113,41 @@ namespace MapaSala.Formularios
             // 
             // btn_salvar
             // 
-            this.btn_salvar.Location = new System.Drawing.Point(563, 37);
+            this.btn_salvar.Location = new System.Drawing.Point(660, 37);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(75, 23);
             this.btn_salvar.TabIndex = 25;
             this.btn_salvar.Text = "Salvar";
             this.btn_salvar.UseVisualStyleBackColor = true;
             // 
+            // txtnome
+            // 
+            this.txtnome.Location = new System.Drawing.Point(457, 40);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(100, 20);
+            this.txtnome.TabIndex = 35;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(454, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Nome";
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtnome);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dtGridUsuario);
             this.Controls.Add(this.ativo);
-            this.Controls.Add(this.txtTurno);
+            this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtnome);
+            this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
@@ -142,12 +164,14 @@ namespace MapaSala.Formularios
 
         private System.Windows.Forms.DataGridView dtGridUsuario;
         private System.Windows.Forms.CheckBox ativo;
-        private System.Windows.Forms.TextBox txtTurno;
+        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtnome;
+        private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_salvar;
+        private System.Windows.Forms.TextBox txtnome;
+        private System.Windows.Forms.Label label4;
     }
 }

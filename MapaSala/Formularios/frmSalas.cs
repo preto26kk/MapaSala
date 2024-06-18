@@ -91,5 +91,14 @@ namespace MapaSala.Formularios
                 a.Cells[5].Value = Disponivel.Checked;
         
         }
+
+        private void dtGridSalas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Linhaselecionada = e.RowIndex;
+            txtnome.Text = dtGridSalas.Rows[Linhaselecionada].Cells[1].Value.ToString();
+            numCom.Text = dtGridSalas.Rows[Linhaselecionada].Cells[2].Value.ToString();
+            txtId.Text = dtGridSalas.Rows[Linhaselecionada].Cells[0].Value.ToString();
+            numCadeiras.Text = dtGridSalas.Rows[Linhaselecionada].Cells[2].Value.ToString();
+        }
     }
 }

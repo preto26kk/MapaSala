@@ -78,5 +78,13 @@ namespace MapaSala.Formularios
             a.Cells[2].Value = txtApelido.Text;
           
         }
+
+        private void dtGridProf_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Linhaselecionada = e.RowIndex;
+            txtnome.Text = dtGridProf.Rows[Linhaselecionada].Cells[1].Value.ToString();
+            txtApelido.Text = dtGridProf.Rows[Linhaselecionada].Cells[2].Value.ToString();
+            txtId.Text = dtGridProf.Rows[Linhaselecionada].Cells[0].Value.ToString();
+        }
     }
 }

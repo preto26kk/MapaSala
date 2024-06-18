@@ -76,5 +76,13 @@ namespace MapaSala.Formularios
             a.Cells[2].Value = txtTurno.Text;
             a.Cells[3].Value = ativo.Checked;
         }
+
+        private void dtGridCurso_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Linhaselecionada = e.RowIndex;
+            txtnome.Text = dtGridCurso.Rows[Linhaselecionada].Cells[1].Value.ToString();
+            txtTurno.Text = dtGridCurso.Rows[Linhaselecionada].Cells[2].Value.ToString();
+            txtId.Text = dtGridCurso.Rows[Linhaselecionada].Cells[0].Value.ToString();
+        }
     }
 }

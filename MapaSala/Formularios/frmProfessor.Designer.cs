@@ -39,6 +39,7 @@ namespace MapaSala.Formularios
             this.dtGridProf = new System.Windows.Forms.DataGridView();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.Excluir = new System.Windows.Forms.Button();
+            this.Editar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProf)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,11 +131,22 @@ namespace MapaSala.Formularios
             this.Excluir.UseVisualStyleBackColor = true;
             this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
+            // Editar
+            // 
+            this.Editar.Location = new System.Drawing.Point(670, 26);
+            this.Editar.Name = "Editar";
+            this.Editar.Size = new System.Drawing.Size(75, 23);
+            this.Editar.TabIndex = 17;
+            this.Editar.Text = "Editar";
+            this.Editar.UseVisualStyleBackColor = true;
+            this.Editar.Click += new System.EventHandler(this.Editar_Click);
+            // 
             // frmProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Editar);
             this.Controls.Add(this.Excluir);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.dtGridProf);
@@ -167,5 +179,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.DataGridView dtGridProf;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button Excluir;
+        private System.Windows.Forms.Button Editar;
     }
 }

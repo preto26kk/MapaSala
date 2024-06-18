@@ -41,6 +41,9 @@ namespace MapaSala.Formularios
             this.numCom = new System.Windows.Forms.NumericUpDown();
             this.numCadeiras = new System.Windows.Forms.NumericUpDown();
             this.dtGridSalas = new System.Windows.Forms.DataGridView();
+            this.Excuir = new System.Windows.Forms.Button();
+            this.Limpar = new System.Windows.Forms.Button();
+            this.Editar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numCom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
@@ -100,7 +103,7 @@ namespace MapaSala.Formularios
             // Islab
             // 
             this.Islab.AutoSize = true;
-            this.Islab.Location = new System.Drawing.Point(436, 33);
+            this.Islab.Location = new System.Drawing.Point(12, 68);
             this.Islab.Name = "Islab";
             this.Islab.Size = new System.Drawing.Size(85, 17);
             this.Islab.TabIndex = 8;
@@ -110,7 +113,7 @@ namespace MapaSala.Formularios
             // Disponivel
             // 
             this.Disponivel.AutoSize = true;
-            this.Disponivel.Location = new System.Drawing.Point(527, 33);
+            this.Disponivel.Location = new System.Drawing.Point(103, 68);
             this.Disponivel.Name = "Disponivel";
             this.Disponivel.Size = new System.Drawing.Size(77, 17);
             this.Disponivel.TabIndex = 9;
@@ -120,7 +123,7 @@ namespace MapaSala.Formularios
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(610, 29);
+            this.btnSalvar.Location = new System.Drawing.Point(610, 31);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 10;
@@ -145,16 +148,49 @@ namespace MapaSala.Formularios
             // dtGridSalas
             // 
             this.dtGridSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridSalas.Location = new System.Drawing.Point(12, 77);
+            this.dtGridSalas.Location = new System.Drawing.Point(12, 126);
             this.dtGridSalas.Name = "dtGridSalas";
-            this.dtGridSalas.Size = new System.Drawing.Size(673, 352);
+            this.dtGridSalas.Size = new System.Drawing.Size(673, 303);
             this.dtGridSalas.TabIndex = 13;
+            // 
+            // Excuir
+            // 
+            this.Excuir.Location = new System.Drawing.Point(517, 31);
+            this.Excuir.Name = "Excuir";
+            this.Excuir.Size = new System.Drawing.Size(75, 23);
+            this.Excuir.TabIndex = 14;
+            this.Excuir.Text = "Excuir";
+            this.Excuir.UseVisualStyleBackColor = true;
+            this.Excuir.Click += new System.EventHandler(this.Excuir_Click);
+            // 
+            // Limpar
+            // 
+            this.Limpar.Location = new System.Drawing.Point(436, 30);
+            this.Limpar.Name = "Limpar";
+            this.Limpar.Size = new System.Drawing.Size(75, 23);
+            this.Limpar.TabIndex = 15;
+            this.Limpar.Text = "Limpar";
+            this.Limpar.UseVisualStyleBackColor = true;
+            this.Limpar.Click += new System.EventHandler(this.Limpar_Click);
+            // 
+            // Editar
+            // 
+            this.Editar.Location = new System.Drawing.Point(436, 60);
+            this.Editar.Name = "Editar";
+            this.Editar.Size = new System.Drawing.Size(75, 23);
+            this.Editar.TabIndex = 16;
+            this.Editar.Text = "Editar";
+            this.Editar.UseVisualStyleBackColor = true;
+            this.Editar.Click += new System.EventHandler(this.Editar_Click);
             // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 450);
+            this.Controls.Add(this.Editar);
+            this.Controls.Add(this.Limpar);
+            this.Controls.Add(this.Excuir);
             this.Controls.Add(this.dtGridSalas);
             this.Controls.Add(this.numCadeiras);
             this.Controls.Add(this.numCom);
@@ -193,5 +229,8 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.NumericUpDown numCom;
         private System.Windows.Forms.NumericUpDown numCadeiras;
         private System.Windows.Forms.DataGridView dtGridSalas;
+        private System.Windows.Forms.Button Excuir;
+        private System.Windows.Forms.Button Limpar;
+        private System.Windows.Forms.Button Editar;
     }
 }

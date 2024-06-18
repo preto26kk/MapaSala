@@ -13,11 +13,19 @@ namespace MapaSala.Formularios
 {
     public partial class frmcursos : Form
     {
-        BindingSource dados;
+        DataTable dados;
+        int Linhaselecionada;
         public frmcursos()
         {
             InitializeComponent();
-            dados = new BindingSource();
+            dados = new DataTable();
+            foreach (var atributos in typeof(Cursoentidades).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
+            dados.Rows.Add(1, "Intinerario Formativo", "IF");
+            dados.Rows.Add(2, "Adiministração", "ADM");
+            dados.Rows.Add(3, "Desenvolvimento de sistemas", "DS");
             dtGridCurso.DataSource = dados;
         }
 
@@ -29,7 +37,8 @@ namespace MapaSala.Formularios
             salas.Turno = txtTurno.Text;
             salas.Ativo = ativo.Checked;
 
-            dados.Add(salas);
+            dados.Rows.Add(salas.Linha());
+            LimparCampos();
         }
 
         private void dtGridCurso_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,10 +48,33 @@ namespace MapaSala.Formularios
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            LimparCampos();
+        }
+
+        private void frmcursos_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void LimparCampos()
+        {
             txtnome.Text = "";
             txtId.Text = "";
             txtTurno.Text = "";
             ativo.Checked = false;
+        }
+
+        private void Excluir_Click(object sender, EventArgs e)
+        {
+            dtGridCurso.Rows.RemoveAt(Linhaselecionada);
+        }
+
+        private void Editar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow a = dtGridCurso.Rows[Linhaselecionada];//fazer isso em todas
+            a.Cells[0].Value = txtId.Text;
+            a.Cells[1].Value = txtnome.Text;
+            a.Cells[2].Value = txtTurno.Text;
+            a.Cells[3].Value = ativo.Checked;
         }
     }
 }

@@ -67,9 +67,23 @@ namespace MapaSala.Formularios
 
         private void Limpar_Click(object sender, EventArgs e)
         {
+            LimparCampos();
+        }
+
+        private void LimparCampos()
+        {
             txtnome.Text = "";
             txtId.Text = "";
             txtSigla.Text = "";
+        }
+
+        private void Editar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow a = dtGridDisciplina.Rows[Linhaselecionada];//fazer isso em todas
+            a.Cells[0].Value = txtId.Text;
+            a.Cells[1].Value = txtnome.Text;
+            a.Cells[2].Value = txtSigla.Text;
+            a.Cells[3].Value = ativo.Checked;
         }
     }
 }
